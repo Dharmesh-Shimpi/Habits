@@ -9,11 +9,6 @@ async function connectDatabase() {
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
 			},
-			(err) => {
-				if (err) {
-					console.log(err);
-				}
-			},
 		);
 	} catch (error) {
 		console.log(error);
