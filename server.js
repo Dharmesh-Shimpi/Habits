@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 async function connectDatabase() {
 	try {
 		await mongoose.connect(
-			'mongodb+srv://dharmeshshimpi:q6CWSjiZDgzEsiJv@freecluster.jufmwpo.mongodb.net/habits?retryWrites=true&w=majority&appName=freeCluster',
+			'mongodb+srv://dharmeshshimpi:q6CWSjiZDgzEsiJv@freecluster.jufmwpo.mongodb.net/habits',
 			{
 				useNewUrlParser: true,
 				useUnifiedTopology: true,

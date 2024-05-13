@@ -7,8 +7,9 @@ export const createController = async (req, res) => {
 		const habitDescriptions = await getHabitDescriptions();
 		res.status(200).render('detail', { habitDescriptions, error });
 	} catch (error) {
+		const habitDescriptions = await getHabitDescriptions();
 		console.error('Error creating habit:', error);
-		res.status(500).json({ error: 'Error creating habit' });
+		res.status(500).render('detail', { habitDescriptions, error });
 	}
 };
 
@@ -19,6 +20,7 @@ export const displayHabitController = async (req, res) => {
 		res.status(200).render('detail', { habitDescriptions, error });
 	} catch (error) {
 		console.error('Error displaying habit:', error);
-		throw error;
+		const habitDescriptions = await getHabitDescriptions();
+		res.status(500).render('detail', { habitDescriptions, error });
 	}
 };
