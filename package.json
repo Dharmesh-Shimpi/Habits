@@ -1,0 +1,21 @@
+{
+  "name": "habit",
+  "version": "1.0.0",
+  "description": "habit tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "habit tracker",
+    "start": "nodemon server.js"
+  },
+  "author": "dharmesh",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongodb": "^6.6.0",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0"
+  }
+}

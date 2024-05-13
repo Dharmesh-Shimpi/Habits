@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: large;
+	color: aliceblue;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 90vh;
+	width: 30vw;
+	background: none;
+}
+
+.error {
+	color: red;
+	width: 100%;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 3rem;
+	width: 100%;
+}
+
+input {
+	height: 2rem;
+	width: 92%;
+	border: 0cap;
+	padding-left: 1rem;
+}
+
+button {
+	height: 2rem;
+	width: 8%;
+	border: none;
+	background: none;
+}
+
+.habits {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: start;
+	height: 90%;
+	width: 100%;
+	border: 1px solid aliceblue;
+}
+
+.habit-description {
+	cursor: pointer;
+	height: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid aliceblue;
+}
+
+.calendar {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	height: 90%;
+	width: 100%;
+}
+
+.date-box {
+	cursor: pointer;
+	height: 4rem;
+	width: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	border: 1px solid aliceblue;
+}
+
+.date {
+	border-bottom: 1px solid aliceblue;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.status {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border: 1px solid aliceblue;
+}
+
+.box {
+	padding: .3rem;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 500px) {
+	main {
+		width: 90vw;
+	}
+}

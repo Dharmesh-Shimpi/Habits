@@ -1,0 +1,23 @@
+<% if (habit.length > 0) { %>
+<h5 class="habit-description"><%= habit[0].month%>, <%= habit[0].year%></h5>
+<div class="calendar">
+	<% habit.forEach(habit => { %>
+	<div class="date-box" onclick="toggleStatusList(this, '<%= habit._id %>')">
+		<h4 class="date"><%= habit.date %></h4>
+		<% if (habit.status === "Nothing") { %>
+		<div class="box"></div>
+		<% } else if (habit.status === "Done") { %>
+		<i class="fa-solid fa-check box"></i>
+		<% } else if (habit.status === "Not Done") { %>
+		<i class="fa-solid fa-xmark box"></i>
+		<% } %>
+		<div class="status" style="display: none">
+			<div onclick="updateStatus('<%= habit._id %>', 'Done')"><i class="fa-solid fa-check box"></i></div>
+			<div onclick="updateStatus('<%= habit._id %>', 'Not Done')"><i class="fa-solid fa-xmark box"></i></div>
+		</div>
+	</div>
+	<% }) %>
+</div>
+<% } else { %>
+<p>No habits found.</p>
+<% } %>

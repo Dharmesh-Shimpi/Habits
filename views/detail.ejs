@@ -1,0 +1,21 @@
+<div class="error"><%=error%></div>
+<form action="/" method="post">
+	<input
+		type="text"
+		class="todo-input input-style"
+		name="description"
+		placeholder="Add Habit"
+		focus
+	/>
+	<button type="submit"><i class="fa-solid fa-circle-plus"></i></button>
+</form>
+
+<div class="habits">
+	<% if (habitDescriptions.length > 0) {habitDescriptions.forEach(habit => {%>
+	<h4 class="habit-description" onclick="displayDescription('<%= habit%>')">
+		<%= habit%>
+	</h4>
+	<% })} else { %>
+	<p>No habits found.</p>
+	<% } %>
+</div>
