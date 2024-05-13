@@ -3,7 +3,18 @@ import mongoose from 'mongoose';
 
 async function connectDatabase() {
 	try {
-		await mongoose.connect('mongodb+srv://dharmeshshimpi:q6CWSjiZDgzEsiJv@freecluster.jufmwpo.mongodb.net/habits?retryWrites=true&w=majority&appName=freeCluster');
+		await mongoose.connect(
+			'mongodb+srv://dharmeshshimpi:q6CWSjiZDgzEsiJv@freecluster.jufmwpo.mongodb.net/habits?retryWrites=true&w=majority&appName=freeCluster',
+			{
+				useNewUrlParser: true,
+				useUnifiedTopology: true,
+			},
+			(err) => {
+				if (err) {
+					console.log(err);
+				}
+			},
+		);
 	} catch (error) {
 		console.log(error);
 	}
