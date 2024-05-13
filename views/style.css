@@ -37,6 +37,17 @@ input {
 	width: 92%;
 	border: 0cap;
 	padding-left: 1rem;
+	color: aliceblue;
+	background: none;
+}
+
+input::placeholder {
+	color: aliceblue;
+	opacity: 1;
+}
+
+input:focus {
+	outline: none;
 }
 
 button {
@@ -63,8 +74,8 @@ button {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	border: 1px solid aliceblue;
+	justify-content: flex-start;
+	padding: 1rem;
 }
 
 .calendar {
@@ -107,7 +118,7 @@ button {
 }
 
 .box {
-	padding: .3rem;
+	padding: 0.3rem;
 }
 
 /* RESPONSIVE */
