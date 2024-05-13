@@ -1,0 +1,1 @@
+This is an Habit tracker app helps with tracking habits from the day it started. Every day new day is added in the calendar or it refreshs all the missing dates in the app if the app is loaded after few days
