@@ -48,16 +48,14 @@ export async function updateCalendar(habitDescription) {
 		if (!habit) {
 			throw new Error('Habit not found');
 		}
-		
 		const creationDate = habit.createdAt;
 		const currentDate = new Date();
 
 		for (
-			let date = creationDate;
+			let date = new Date(creationDate);
 			date <= currentDate;
 			date.setDate(date.getDate() + 1)
 		) {
-			
 			const year = date.getFullYear();
 			const month = date.toLocaleString('default', { month: 'long' });
 			const day = date.getDate();
